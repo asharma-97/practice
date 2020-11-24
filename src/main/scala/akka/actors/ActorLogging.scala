@@ -1,7 +1,7 @@
 package akka.actors
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
-import akka.event.Logging
+import akka.event.{Logging, LoggingAdapter}
 
 object ActorLogging extends App {
   /**
@@ -12,7 +12,7 @@ object ActorLogging extends App {
     // 2 - info
     // 3 - warn
     // 4 - error
-    val logger = Logging(context.system, this)
+    val logger: LoggingAdapter = Logging(context.system, this)
 
     override def receive: Receive = {
       case message =>
