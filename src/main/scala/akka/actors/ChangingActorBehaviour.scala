@@ -42,7 +42,7 @@ object ChangingActorBehaviour extends App {
       case Ask(_) => sender() ! KidAccept
     }
     def sadReceive: Receive = {
-      case Food(VEGETABLES) => context.become(sadReceive, false)
+      case Food(VEGETABLES) => context.become(sadReceive, discardOld = false)
       case Food(CHOCOLATE) => context.unbecome()
       case Ask(_) => sender() ! KidReject
     }
