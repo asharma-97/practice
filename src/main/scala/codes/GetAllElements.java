@@ -21,8 +21,8 @@ public class GetAllElements {
         List<Integer> l = new ArrayList<Integer>();
         Stack<Integer> s1 = new Stack<Integer>();
         Stack<Integer> s2 = new Stack<Integer>();
-        postOrder(root1, s1);
-        postOrder(root2, s2);
+        traverse(root1, s1);
+        traverse(root2, s2);
         while(!(s1.isEmpty() && s2.isEmpty())) {
             if(!s1.isEmpty() && !s2.isEmpty()) {
                 if(s1.peek() < s2.peek()) l.add(s1.pop());
@@ -35,11 +35,11 @@ public class GetAllElements {
         }
         return l;
     }
-    public void postOrder(TreeNode root, Stack<Integer> s) {
+    public void traverse(TreeNode root, Stack<Integer> s) {
         if(root == null) return;
-        postOrder(root.right, s);
+        traverse(root.right, s);
         s.add(root.val);
-        postOrder(root.left, s);
+        traverse(root.left, s);
     }
 
 }
