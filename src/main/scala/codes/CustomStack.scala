@@ -28,8 +28,3 @@ class CustomStack(_maxSize: Int) {
   }
 
 }
-
-object CustomStack extends App {
-  var obj = new CustomStack(5)
-
-}
