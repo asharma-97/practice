@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object FreqAlphabets extends App {
   println(freqAlphabets("10#11#12"))

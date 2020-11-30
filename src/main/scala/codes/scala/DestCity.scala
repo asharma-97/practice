@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object DestCity extends App {
   println(destCity(List(List("London","New York"))))

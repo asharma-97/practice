@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object FindElements extends App {
   val _root: TreeNode = new TreeNode(-1)

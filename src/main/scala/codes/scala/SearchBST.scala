@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object SearchBST extends App {
 def searchBST(root: TreeNode, `val`: Int): TreeNode = {

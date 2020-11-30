@@ -1,4 +1,4 @@
-package codes;
+package codes.java;
 
 public class RestoreMatrix {
     public static void main(String[] args) {

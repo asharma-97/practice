@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object NaryPreOrder extends App {
 
@@ -8,8 +8,8 @@ object NaryPreOrder extends App {
   }
 
   def preorder(root: Node): List[Int] = {
-    if(root == null) return List()
-    root.value :: root.children.foldLeft[List[Int]](List())((x, y) => x ::: preorder(y))
+    if(root == null) List()
+    else root.value :: root.children.foldLeft[List[Int]](List())((x, y) => x ::: preorder(y))
   }
 
   val tn = new Node(1)

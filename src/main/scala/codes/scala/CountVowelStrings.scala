@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object CountVowelStrings extends App {
   def countVowelStrings(n: Int): Int = {

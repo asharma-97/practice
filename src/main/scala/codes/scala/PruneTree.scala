@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object PruneTree extends App {
   def pruneTree(root: TreeNode): TreeNode = {

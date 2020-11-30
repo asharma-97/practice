@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object GenerateTheString {
   def generateTheString(n: Int): String = {

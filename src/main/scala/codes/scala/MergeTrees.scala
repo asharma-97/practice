@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object MergeTrees extends App {
   val tn1 = new TreeNode(1)

@@ -1,4 +1,4 @@
-package codes;
+package codes.java;
 
 public class UniquePathsIII {
     static int[][] arr = {{1, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 2, -1}};

@@ -1,4 +1,4 @@
-package codes;
+package codes.java;
 
 import java.util.TreeMap;
 import java.util.TreeSet;

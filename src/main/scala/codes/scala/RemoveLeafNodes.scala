@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object RemoveLeafNodes extends App {
   def removeLeafNodes(root: TreeNode, target: Int): TreeNode = {

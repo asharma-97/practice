@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/maximum-number-of-coins-you-can-get
-package codes;
+package codes.java;
 
 import java.util.Arrays;
 

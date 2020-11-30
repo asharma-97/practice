@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object NumTilesPossible extends App {
   def numTilePossibilities(tiles: String): Int = {

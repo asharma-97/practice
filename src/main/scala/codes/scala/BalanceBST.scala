@@ -1,4 +1,4 @@
-package codes
+package codes.scala
 
 object BalanceBST extends App {
 
