@@ -1,4 +1,4 @@
-package codes.scala;
+package codes.java;
 
 import java.util.Collections;
 import java.util.LinkedList;
