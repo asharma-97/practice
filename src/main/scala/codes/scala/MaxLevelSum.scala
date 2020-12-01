@@ -20,7 +20,6 @@ object MaxLevelSum extends App {
    * }
    *
    */
-  *
 
   def maxLevelSum(root: TreeNode): Int = {
     val nodes1 = mutable.Queue[TreeNode]()
