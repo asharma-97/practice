@@ -7,6 +7,7 @@ import org.scalatest.BeforeAndAfterAll
 import org.scalatest.wordspec.AnyWordSpecLike
 
 import scala.concurrent.duration._
+import scala.language.postfixOps
 import scala.util.Random
 
 class TimedAssertionsSpec extends TestKit(
@@ -35,7 +36,7 @@ class TimedAssertionsSpec extends TestKit(
       within(1 second) {
         workerActor ! "workSequence"
 
-        val results: Seq[Int] = receiveWhile[Int](max=2 seconds, idle=500 millis, messages=4) {
+        val results: Seq[Int] = receiveWhile[Int](max = 2 seconds, idle = 500 millis, messages = 4) {
           case WorkResult(result) => result
         }
 
@@ -74,4 +75,5 @@ object TimedAssertionsSpec {
         }
     }
   }
+
 }

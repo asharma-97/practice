@@ -3,6 +3,7 @@ package akka.infra
 import akka.actor.{Actor, ActorLogging, ActorSystem, Cancellable, PoisonPill, Props}
 
 import scala.concurrent.duration._
+import scala.language.postfixOps
 
 object Timer extends App {
   /**
@@ -13,12 +14,16 @@ object Timer extends App {
    * - If you send another message, the time window resets
    * */
   val system = ActorSystem("system")
+
   import system.dispatcher
-  class SelfClosingActor extends Actor with ActorLogging{
+
+  class SelfClosingActor extends Actor with ActorLogging {
     def createTimeoutWindow(): Cancellable = system.scheduler.scheduleOnce(1 second) {
       self ! PoisonPill
     }
+
     override def receive: Receive = closableActor(createTimeoutWindow())
+
     def closableActor(c: Cancellable): Receive = {
       case message =>
         log.info(message.toString)
@@ -28,6 +33,7 @@ object Timer extends App {
         }))
     }
   }
+
   val actor = system.actorOf(Props[SelfClosingActor])
   val routine = system.scheduler.scheduleOnce(0.5 second) {
     actor ! "PING!"
