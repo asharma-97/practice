@@ -13,7 +13,7 @@ object LowLevelAPI extends App {
   implicit val materializer = ActorMaterializer()
   import system.dispatcher
 
-  val serverSource: Source[Http.IncomingConnection, Future[Http.ServerBinding]] = Http() newServerAt("localhost", 3000) connectionSource()
+  val serverSource: Source[Http.IncomingConnection, Future[Http.ServerBinding]] = Http().newServerAt("localhost", 3000).connectionSource()
   val connectionSink = Sink.foreach[IncomingConnection] { connection =>
     println(s"Accepted incoming conenction from: ${connection.remoteAddress}")
   }
