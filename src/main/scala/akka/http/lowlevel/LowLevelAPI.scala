@@ -11,7 +11,6 @@ import scala.concurrent.Future
 object LowLevelAPI extends App {
   implicit val system = ActorSystem("system")
   implicit val materializer = ActorMaterializer()
-  import system.dispatcher
 
   val serverSource: Source[Http.IncomingConnection, Future[Http.ServerBinding]] = Http().newServerAt("localhost", 3000).connectionSource()
   val connectionSink = Sink.foreach[IncomingConnection] { connection =>
