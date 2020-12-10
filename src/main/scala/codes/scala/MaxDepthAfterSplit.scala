@@ -23,5 +23,5 @@ object MaxDepthAfterSplit extends App {
     }
     res
   }
-  maxDepthAfterSplit("(()())").foreach(print + " ")
+  maxDepthAfterSplit("(()())").foreach(print)
 }
