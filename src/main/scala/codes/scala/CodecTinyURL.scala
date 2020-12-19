@@ -22,7 +22,7 @@ object CodecTinyURL extends App {
         s = random.nextString(6)
       }
       hs.add(s)
-      hm.addOne((s, longURL))
+      hm += ((s, longURL))
       s
     }
 

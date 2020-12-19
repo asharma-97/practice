@@ -2,7 +2,7 @@ name := "practice"
 
 version := "0.1"
 
-scalaVersion := "2.13.4"
+scalaVersion := "2.12.0"
 
 val akkaVersion = "2.6.10"
 val akkaHttpVersion = "10.2.1"
@@ -21,5 +21,7 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % scalaTestVersion,
   "org.typelevel" %% "cats-core" % cats,
   // JWT
-  "com.pauldijou" %% "jwt-spray-json" % "4.3.0"
+  "com.pauldijou" %% "jwt-spray-json" % "4.3.0",
+  // Spark
+  "org.apache.spark" %% "spark-core" % "3.0.1"
 )

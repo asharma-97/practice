@@ -5,12 +5,12 @@ import scala.collection.mutable
 object GetKth extends App {
   def getKth(lo: Int, hi: Int, k: Int): Int = {
     val hm = new mutable.HashMap[Int, Int]()
-    hm.addOne(1, 0)
+    hm += ((1,0))
     def fun(x: Int): Int = {
       if (hm.contains(x)) hm(x)
       else {
         val a = 1 + (if (x % 2 == 0) fun(x / 2) else fun(3 * x + 1))
-        hm.addOne(x, a)
+        hm += ((x,a))
         a
       }
     }

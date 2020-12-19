@@ -7,7 +7,7 @@ object DeckRevealedIncreasing extends App {
     val sorted = deck.sorted
     val q: mutable.Queue[Int] = new mutable.Queue[Int]()
     for (i <- sorted.indices) {
-      q.addOne(i)
+      q += i
     }
     val ans: Array[Int] = new Array[Int](sorted.length)
     for (i <- sorted.indices) {
